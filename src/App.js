@@ -1,28 +1,19 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Index from "../src/screens/home";
+import Notfound from "../src/screens/notfound";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+import "./scss/app.scss";
 
-export default App;
+export default () => (
+  <Router>
+    <Switch>
+      <Route exact={true} path="/" render={() => <Index />} />
+      <Route
+        path="/users/:id"
+        render={({ match }) => <Index modal match={match} />}
+      />
+      <Route component={() => <Notfound />} />
+    </Switch>
+  </Router>
+);

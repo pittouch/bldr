@@ -1,0 +1,14 @@
+.list-users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 768px;
+  margin: 0 auto;
+  @include respond-to(mobile-small) {
+    max-width: 280px;
+  }
+
+  @include respond-to(tablet) {
+    max-width: 720px;
+  }
+}

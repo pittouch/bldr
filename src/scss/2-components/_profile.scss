@@ -1,0 +1,103 @@
+.profile {
+  background-color: $white;
+  box-shadow: 0 0 4px 0 rgba(172, 172, 172, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 10px;
+
+  &__header {
+    display: flex;
+  }
+
+  &__picture {
+    padding: 0 20px 20px 0;
+    position: absolute;
+    left: 110px;
+    top: -50px;
+    @include respond-to(mobile-landscape) {
+      position: initial;
+    }
+
+    @include respond-to(tablet) {
+      position: initial;
+    }
+  }
+  &__identity {
+    display: flex;
+
+    @include respond-to(tablet) {
+      justify-content: center;
+    }
+  }
+  &__name {
+    font-size: 18px;
+    color: $blue;
+  }
+  &--capital {
+    display: inline-block;
+    text-transform: capitalize;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 15px 0 10px;
+
+    @include respond-to(mobile-landscape) {
+      align-items: flex-start;
+      justify-content: center;
+      margin: 15px 0 35px;
+    }
+
+    @include respond-to(tablet) {
+      align-items: flex-start;
+    }
+  }
+  &__location {
+    color: $light-blue;
+    font-size: 12px;
+  }
+  &__stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @include respond-to(tablet) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__separator {
+    width: 1px;
+    height: 25px;
+    background-color: rgba(151, 151, 151, 0.1);
+  }
+
+  &__statname {
+    color: $light-blue;
+    font-size: 10px;
+    text-transform: capitalize;
+  }
+
+  &__numbers {
+    color: $orange;
+    font-size: 24px;
+  }
+  &__share {
+    position: fixed;
+    bottom: 200px;
+    left: 450px;
+  }
+}
+
+.stat-likes {
+  width: 30px;
+}

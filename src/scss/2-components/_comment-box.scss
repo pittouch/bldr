@@ -1,0 +1,59 @@
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(172, 172, 172, 0.5);
+  border-radius: 5px;
+  @include respond-to(mobile-landscape) {
+    display: none;
+  }
+}
+
+.show-comment {
+  font-size: 14px;
+  color: $orange;
+  letter-spacing: 0;
+  text-decoration: underline;
+  padding: 10px;
+  text-align: center;
+  @include respond-to(tablet) {
+    text-align: left;
+  }
+}
+
+.list-comment__scroll {
+  overflow: scroll;
+
+  @include respond-to(mobile-small) {
+    max-height: 20vh;
+  }
+
+  @include respond-to(mobile) {
+    max-height: 25vh;
+  }
+
+  @include respond-to(tablet) {
+    max-height: 35vh;
+  }
+}
+
+.liked {
+  color: #de484c;
+}
+
+.unliked {
+  color: #d3d3d3;
+}
+
+.hide {
+  max-height: 0;
+}
+
+.show {
+  display: block;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.show:last-child {
+  border-bottom: 0;
+}

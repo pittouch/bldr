@@ -1,0 +1,32 @@
+.comment {
+  display: flex;
+  padding: 30px 50px 20px 20px;
+}
+.comment__content {
+  width: 100%;
+}
+
+.comment:last-child {
+  border-bottom: 0;
+}
+
+.comment p {
+  font-size: 14px;
+  color: #444444;
+}
+
+.comment__pic {
+  padding-right: 11px;
+}
+
+.comment__user {
+  display: flex;
+  justify-content: space-between;
+  color: #002c71;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.comment__user span {
+  color: $light-blue;
+}
